@@ -1,17 +1,29 @@
+import Algorithms.BubbleSort.BubbleSort;
 import Algorithms.InsertionSort.InsertionSort;
-
+import TestData.TestData;
 import java.util.Arrays;
 
 
 public class main {
     public static void main(String[] args){
-        int[] temp = new int[]{3,2,5,6,8,3,4};
+        var temp = TestData.testDataInt;
 
         System.out.println("this is test");
         System.out.println(Arrays.toString(temp));
-        InsertionSort a =new InsertionSort(temp);
+        long startTime=System.nanoTime();
+
+
+        BubbleSort a =new BubbleSort(temp);
+        //InsertionSort a = new InsertionSort(temp);
+
+
+        long endTime=System.nanoTime();
         System.out.println(Arrays.toString(temp));
 
+        TestData b = new TestData();
+        System.out.println(Arrays.toString(TestData.testDataInt));
+        System.out.println(Arrays.toString(b.testDataInt));
+        System.out.println("程序运行时间： " + (endTime - startTime) + "ns");
     }
     
 }
