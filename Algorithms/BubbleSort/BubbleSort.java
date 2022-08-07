@@ -1,5 +1,7 @@
 package Algorithms.BubbleSort;
 
+import Algorithms.SortUtils;
+
 public class BubbleSort {
 
     private int length;
@@ -13,7 +15,7 @@ public class BubbleSort {
             sorted = false;
             for (int j = 0; j < length - i - 1; j++) {
                 if (data[j] > data[j + 1]) {
-                    swap(data, j, j + 1);
+                    SortUtils.swap(data, j, j + 1);
                     sorted = true;
                 }
             }
@@ -24,9 +26,7 @@ public class BubbleSort {
 
     }
 
-    public void swap(int[] data, int index_1, int index_2) {
-        temp = data[index_1];
-        data[index_1] = data[index_2];
-        data[index_2] = temp;
+
     }
-}
+
+
