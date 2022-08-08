@@ -6,6 +6,9 @@ public  class TestData {
                                                     3,-23,65,6,76,8,7898,454,754,35,54,3,576,346,
                                                     45,34,32,4,12,3,0,8,55,-2,3,45,-43,21,50,
                                                     234,2,91,-3,-12,10};
+    public static int[] testDataIntShort = new int[] {
+        1,10,-2,3
+    };
     public char[] testDataChar = new char[] {'a','1','b','c','d','s','9','S',',','.',';','`','S','2'};
     public String[] testDataString = new String[] { "BOE","TENCENT","MICROSOFT","APPLE","GOOGLE","ALIBABA",
                                                     "ZOOM","NIO","XIAOMI","REDMI","ORACLE"};
