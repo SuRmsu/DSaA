@@ -2,25 +2,30 @@ package Algorithms.QuickSort;
 
 import static Algorithms.SortUtils.swap;
 
-public class Quicksort {
+public class QuickSort {
     private int length;
     private int[] temp;
 
-    public Quicksort(int[] data) {
+    /**
+     * Quick Sort
+     * Ihe idea was from TuringPlanet，not perfect
+     * @param data the array which needs to be sorted
+     */
+    public QuickSort(int[] data) {
         int partitionIndex = partition(data, 0, data.length - 1);
-        new Quicksort(data, 0, partitionIndex - 1);
-        new Quicksort(data, partitionIndex + 1, data.length - 1);
+        new QuickSort(data, 0, partitionIndex - 1);
+        new QuickSort(data, partitionIndex + 1, data.length - 1);
 
     }
 
     //该函数用于排序
-    public Quicksort(int[] data, int left, int right) {
+    public QuickSort(int[] data, int left, int right) {
         if (left >= right) {
             return;
         }
         int partitionIndex = partition(data, left, right);
-        new Quicksort(data, left, partitionIndex - 1);
-        new Quicksort(data, partitionIndex + 1, right);
+        new QuickSort(data, left, partitionIndex - 1);
+        new QuickSort(data, partitionIndex + 1, right);
     }
 
     //该函数用于确认分割位置，其内部会交换数组数据，使得分割位置为中间位置。

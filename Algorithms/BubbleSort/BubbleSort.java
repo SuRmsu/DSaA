@@ -9,6 +9,12 @@ public class BubbleSort {
 
     private boolean sorted;
 
+    /**
+     * Bubble Sort
+     * Ihe idea was from Myself, 核心科技看自己
+     * @param data the array which needs to be sorted
+     */
+
     public BubbleSort(int[] data) {
         length = data.length;
         for (int i = 0; i < length - 1; i++) {
