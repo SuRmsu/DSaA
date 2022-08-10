@@ -1,4 +1,5 @@
 import Algorithms.MergeSort.MergeSort;
+import Algorithms.MergeSort.MergeSortTemp;
 import Algorithms.QuickSort.QuickSort;
 import TestData.TestData;
 import java.util.Arrays;
@@ -15,7 +16,7 @@ public class main {
         //QuickSort a = new QuickSort(temp);
         //BubbleSort a =new BubbleSort(temp);
         //InsertionSort a = new InsertionSort(temp);
-        MergeSort a =new MergeSort(temp);
+        MergeSortTemp a =new MergeSortTemp(temp);
 
         long endTime=System.nanoTime();
         System.out.println(Arrays.toString(temp));
