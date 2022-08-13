@@ -11,7 +11,7 @@ public class TestClass {
             1,2,3,4,5
         };
         RotateArray a = new RotateArray();
-                a.rotate2(data,4);
+                a.rotate1(data,9);
         System.out.println(Arrays.toString(data));
     }
 

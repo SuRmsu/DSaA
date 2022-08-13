@@ -23,17 +23,39 @@ public class RotateArray {
 
     }
 
+    //该方法未能理解，需要进一步了解
+    public void rotate1(int[] nums, int k ){
+        int n = nums.length;
+        k = k % n;
+        int count = gcd(k,n);
+        for (int start = 0; start < count; ++start){
+            int current = start;
+            int prev = nums[start];
+            do {
+                int next = (current + k) % n;
+                int temp = nums[next];
+                nums[next] = prev;
+                prev = temp;
+                current = next;
+            } while (start != current);
+        }
+    }
+    public int gcd(int x, int y) {
+        return y > 0 ? gcd(y, x % y) : x;
+    }
+
     public void rotate2(int[] nums, int k){
-        int length = nums.length;
-        for (int i = 0; i < length / 2; i++) {
-            swap(nums, i, length - i - 1);
-        }
-        int times = k % length;
-        for (int i = 0; i < (times - 1)/2; i++) {
-            swap(nums,i,length - i - 1);
-        }
-        for (int i = times; i < times + length / 2; i++) {
-            swap(nums,i,length + times - i - 1);
+        k %= nums.length;
+        reverse(nums, 0,nums.length -1);
+        reverse(nums, 0,k-1);
+        reverse(nums,k,nums.length - 1);
+    }
+
+    public void reverse(int[] nums, int start, int end){
+        while(start < end) {
+            swap(nums,start,end);
+            start += 1;
+            end -= 1;
         }
     }
 }
