@@ -1,18 +1,20 @@
 package LeetCode;
 
 import LeetCode.RotateArray.RotateArray;
+import LeetCode.Shift2DGrid.Shift2DGrid;
+import LeetCode.ValidMountainArray.ValidMountainArray;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class TestClass {
     public static void main(String[] args) {
-        int[] data= new int[] {
-            1,2,3,4,5
+        int[] data=  {
+                0,1,2,1,2
         };
-        RotateArray a = new RotateArray();
-                a.rotate1(data,9);
-        System.out.println(Arrays.toString(data));
+        ValidMountainArray a = new ValidMountainArray();
+
+        System.out.println(a.validMountainArray(data));
     }
 
 }
